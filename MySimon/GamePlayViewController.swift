@@ -10,117 +10,122 @@ import UIKit
 
 class GamePlayViewController: UIViewController {
     
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var blueButton: UIButton!
-    @IBOutlet weak var yellowButton: UIButton!
-    @IBOutlet var redButton: UIButton!
-    @IBOutlet weak var greenButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!        // Start new game button tag = 5
+    @IBOutlet weak var blueButton: UIButton!        // blue button   tag = 10
+    @IBOutlet weak var yellowButton: UIButton!      // yellow button tag = 11
+    @IBOutlet weak var redButton: UIButton!         // red button    tag = 12
+    @IBOutlet weak var greenButton: UIButton!       // green button  tag = 13
+    @IBOutlet weak var againButton: UIButton!       // Play another round tag = 6
+    @IBOutlet weak var levelLabel: UILabel!           // tag = 101 diplays current level
+    @IBOutlet weak var matchesForLevelLabel: UILabel! // tag = 100 displays matches for this level.
+    @IBOutlet weak var matchesForRoundLabel: UILabel! // tag = 102 displays matches this round (sequence)
+    @IBOutlet weak var thresholdLabel: UILabel!       // tag = 103 displays threshold for next level
+    @IBOutlet weak var messageLabel: UILabel!         // tag = 110 displays reason round is over
+    @IBOutlet weak var messageLabel2: UILabel!        // tag = 111 displays next or repeat level
+    @IBOutlet weak var smiley: UIImageView!
+    @IBOutlet weak var bigSmiley: UIImageView!
+
     
-    var myGame = SimonGame()
+    var myGame = SimonGame()                        // create instance of SimonGame (in SimonGame.swift)
+    var gameStarting = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("NEW GAME\n")
-
-        // Do any additional setup after loading the view.
-    }
+        // Assign this view controller to the instance  property (idea came from link).  Then I can always
+        //    reference this view controller from the SimonGame class functions.
+        //    http://stackoverflow.com/questions/28184461/how-to-call-method-from-viewcontroller-in-gamescene
+        myGame.viewController = self
+        
+        // Set up the fonts for both message labels.
+        messageLabel.font = UIFont(name: "TrebuchetMS-Bold", size: 24.0)
+        messageLabel2.font = UIFont(name: "MarkerFelt-Wide", size: 24.0)
+        
+        // myGame already initialized, but call reset() to take care of additional game setup
+        myGame.reset(true)  // boolean indicates this is the FIRST call
+        
+        //Display the big smiley (for aesthetics)
+        bigSmiley.hidden = false
+     } // end of viewDidLoad()
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
-    }
-
-    func highlightButton(btag: Int) {
-        let t = 0.25
-
+    // **************************************************************************************************************
+    // highLight(Int, Bool)
+    // Function sets the .highlighted property of the appropriate button (passedin as the Int - button tag) to
+    // true or false (passed in as Bool) to highlight and unhighlight the colored buttons
+    // **************************************************************************************************************
+    func highlight(btag: Int, flash: Bool) {
         switch(btag) {
         case 10:
-            blueButton.highlighted = true
-            delay(t){self.blueButton.highlighted = false}
-            
+            blueButton.highlighted = flash
         case 11:
-            yellowButton.highlighted = true
-            delay(t) {self.yellowButton.highlighted = false}
-            
+            yellowButton.highlighted = flash
         case 12:
-            self.redButton.highlighted = true
-            delay(t) {self.redButton.highlighted = false}
-            
+            redButton.highlighted = flash
         case 13:
-            greenButton.highlighted = true
-            delay(t) {self.greenButton.highlighted = false}
-            
+            greenButton.highlighted = flash
         default: print("Error: highlighting button")
-        }
-    }
+        } // end of switch(btag)
+    } // end of highlightButtonTag()
     
-//
-//    func displayPatternSoFar(index: Int, wait: Double) {
-//        print("Displaying pattern so far - index => \(index)\twait => \(wait)")
-//        if (index > 0) {
-//            displayPatternSoFar(index-1, wait: wait-1)
-//        }
-//        
-//        let buttonTag = myGame.sequence[index]
-//        print ("buttonTag => \(buttonTag)")
-//        delay(wait) {self.highlightButton(buttonTag)}
-//    }
 
-
-    func displayPatternSoFar(index: Int, wait: Double, seq: [Int]) {
-        print("Displaying pattern so far - index => \(index)\twait => \(wait)")
-        if (index > 0) {
-            displayPatternSoFar(index-1, wait: wait-1, seq: seq)
-        }
-        
-        let buttonTag = seq[index]
-        print ("buttonTag => \(buttonTag)")
-        delay(wait) {self.highlightButton(buttonTag)}
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // **************************************************************************************************************
+    // buttonPressed(UIButton)
+    // Function handles ANY button press (4 colored buttons, Continue button or New Game button)
+    // **************************************************************************************************************
     
     @IBAction func buttonPressed(sender: UIButton) {
-
+        
         switch (sender.tag) {
-        case 5:
-            print("Start Button Pressed\n")
-            let waitTime = 8.0 - 1
-
-            myGame.playRound()
+        case 5: // NEW GAME
+            gameStarting = false
+            myGame.reset(false)                 // reset game (not from viewDidLoad)
+            myGame.startRound(true)             // call startRound (indicate NEW game)
             
+        case 6: // CONTINUE
+            if !gameStarting {
+                myGame.startRound(false)
+            }
             
-//            print ("myGame.sequence.count => \(myGame.sequence.count)")
-//            for i in 0..<myGame.sequence.count {
-//                print ("seq [\(i)] => \(myGame.sequence[i])")
-//            }
-//            
-//            displayPatternSoFar(myGame.sequence.count-1, wait: waitTime)
-//            
-
-        case 10: print("Blue Button Pressed\n")
-        case 11: print("Yellow\n")
-        case 12: print("Red\n")
-        case 13: print("Green\n")
-        default: print("Error\n")
-        }
+        case 10, 11, 12, 13: // Colored Button (blue, yellow, red, or green)
+            // Only process button tap if .playing is true (otherwise ignore button taps)
+            // .playing only true when time for user to repeat sequence
+           if myGame.playing {
+                myGame.stopTookTooLong()            // Stop the timer - user response within 3 sec limit
+                myGame.playTone(sender.tag)         // play the button tone
+                myGame.buttonTaps += 1              // update button tap count
+                myGame.userResp.append(sender.tag)  // append user response array (holds user response seq up to this press)
+                
+                if sender.tag !=
+                    myGame.sequence[myGame.userResp.count-1] {        // check if current button press is correct
+                                                                      //     by comparing it to correct sequence
+                    myGame.roundFinished(1)                           // If NOT, call roundFinished() reason 1.
+                } else {                                              // If YES, ...
+                    if (myGame.buttonTaps == myGame.indexMatched+1) { // Check if we're at end of matched seqence (so far)
+                        myGame.indexMatched += 1                      // YES, continue, increment index
+                        smiley.image = myGame.yellowSmiley            //      and load/display yellow smiley
+                        smiley.hidden = false
+                        matchesForLevelLabel.text =                   //      Update statics labels
+                            String(myGame.matchesThisLevel +
+                            myGame.indexMatched)
+                        matchesForRoundLabel.text =
+                            String(myGame.indexMatched)
+                        if (myGame.indexMatched < myGame.sequence.count) { // Check that we're not at end of seq (25)
+                            myGame.delay(1.0) {self.myGame.playNextSeq()}  //  NO, proceed (adding 1 more element to seq).
+                        } else {
+                            myGame.roundFinished(3)                        //  YES, call roundFinished() reason 3
+                        }
+                    } else {                                          // NO, keep playing this round (wait for more
+                        myGame.startTookTooLong()                     //     button taps) so start the timer
+                    }
+                }
+            }
+            
+        default: print("Error in buttonPressed()\n")
+        } // end of case statemet
     } // end of buttonPressed function
     
 }

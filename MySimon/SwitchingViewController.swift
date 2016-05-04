@@ -105,7 +105,7 @@ class SwitchingViewController: UIViewController {
         // Switch view controllers
         switch (sender.tag) {
         case 2: // settings tool bar button item pressed - switch view to settings
-            UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
+            UIView.setAnimationTransition(.CurlUp, forView: view, cache: true)
             settingsViewController.view.frame = view.frame
             if gamePlayViewController != nil && gamePlayViewController!.view.superview != nil {
                 switchViewController(from: gamePlayViewController, to: settingsViewController)
@@ -113,7 +113,7 @@ class SwitchingViewController: UIViewController {
                 switchViewController(from: instructionsViewController, to: settingsViewController)
             }
         case 3: // instructions tool bar button item pressed - switch view to instructions
-            UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
+            UIView.setAnimationTransition(.CurlDown, forView: view, cache: true)
             instructionsViewController.view.frame = view.frame
             if gamePlayViewController != nil && gamePlayViewController!.view.superview != nil {
                 switchViewController(from: gamePlayViewController, to: instructionsViewController)
@@ -122,7 +122,7 @@ class SwitchingViewController: UIViewController {
             }
         
         default: // play tool bar button item pressed - switch view to play (default view)
-            UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
+            UIView.setAnimationTransition(.FlipFromLeft, forView: view, cache: true)
             gamePlayViewController.view.frame = view.frame
             if instructionsViewController != nil && instructionsViewController!.view.superview != nil {
                 switchViewController(from: instructionsViewController, to: gamePlayViewController)

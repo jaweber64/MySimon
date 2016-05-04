@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F5A0E181CD10F450064B4DD /* C06.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F5A0E171CD10F450064B4DD /* C06.wav */; };
+		0F5A0E1E1CD10F610064B4DD /* C18.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F5A0E191CD10F610064B4DD /* C18.wav */; };
+		0F5A0E1F1CD10F610064B4DD /* D08.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F5A0E1A1CD10F610064B4DD /* D08.wav */; };
+		0F5A0E201CD10F610064B4DD /* D20.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F5A0E1B1CD10F610064B4DD /* D20.wav */; };
+		0F5A0E211CD10F610064B4DD /* G01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F5A0E1C1CD10F610064B4DD /* G01.wav */; };
+		0F5A0E221CD10F610064B4DD /* G13.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F5A0E1D1CD10F610064B4DD /* G13.wav */; };
+		0F5CC2891CD69F230059ADB7 /* mistake.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F5CC2881CD69F230059ADB7 /* mistake.wav */; };
+		0F5CC28B1CD7D92D0059ADB7 /* winning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F5CC28A1CD7D92D0059ADB7 /* winning.mp3 */; };
+		0F616CA21CD93584002F5EFD /* MySimonInstructions.html in Resources */ = {isa = PBXBuildFile; fileRef = 0F616CA11CD93584002F5EFD /* MySimonInstructions.html */; };
 		0FBC1CA91CAC078F00C1EA1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC1CA81CAC078F00C1EA1B /* AppDelegate.swift */; };
 		0FBC1CAE1CAC078F00C1EA1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC1CAC1CAC078F00C1EA1B /* Main.storyboard */; };
 		0FBC1CB01CAC078F00C1EA1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC1CAF1CAC078F00C1EA1B /* Assets.xcassets */; };
@@ -18,6 +27,7 @@
 		0FBC1CDB1CAC1A4300C1EA1B /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC1CDA1CAC1A4300C1EA1B /* InstructionsViewController.swift */; };
 		0FBC1CDD1CAC1A6D00C1EA1B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC1CDC1CAC1A6D00C1EA1B /* SettingsViewController.swift */; };
 		0FBC1CF21CB2D3DD00C1EA1B /* SimonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC1CF11CB2D3DD00C1EA1B /* SimonGame.swift */; };
+		0FF4CFA01CDA7C4E003CF1C9 /* iOSProj.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0FF4CF9F1CDA7C4D003CF1C9 /* iOSProj.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +48,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F5A0E171CD10F450064B4DD /* C06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = C06.wav; sourceTree = "<group>"; };
+		0F5A0E191CD10F610064B4DD /* C18.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = C18.wav; sourceTree = "<group>"; };
+		0F5A0E1A1CD10F610064B4DD /* D08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = D08.wav; sourceTree = "<group>"; };
+		0F5A0E1B1CD10F610064B4DD /* D20.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = D20.wav; sourceTree = "<group>"; };
+		0F5A0E1C1CD10F610064B4DD /* G01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = G01.wav; sourceTree = "<group>"; };
+		0F5A0E1D1CD10F610064B4DD /* G13.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = G13.wav; sourceTree = "<group>"; };
+		0F5CC2881CD69F230059ADB7 /* mistake.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mistake.wav; sourceTree = "<group>"; };
+		0F5CC28A1CD7D92D0059ADB7 /* winning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winning.mp3; sourceTree = "<group>"; };
+		0F616CA11CD93584002F5EFD /* MySimonInstructions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = MySimonInstructions.html; sourceTree = "<group>"; };
 		0FBC1CA51CAC078F00C1EA1B /* MySimon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySimon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FBC1CA81CAC078F00C1EA1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FBC1CAD1CAC078F00C1EA1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +74,7 @@
 		0FBC1CDA1CAC1A4300C1EA1B /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		0FBC1CDC1CAC1A6D00C1EA1B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0FBC1CF11CB2D3DD00C1EA1B /* SimonGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimonGame.swift; sourceTree = "<group>"; };
+		0FF4CF9F1CDA7C4D003CF1C9 /* iOSProj.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iOSProj.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +125,21 @@
 		0FBC1CA71CAC078F00C1EA1B /* MySimon */ = {
 			isa = PBXGroup;
 			children = (
+				0FF4CF9F1CDA7C4D003CF1C9 /* iOSProj.pdf */,
 				0FBC1CA81CAC078F00C1EA1B /* AppDelegate.swift */,
 				0FBC1CAC1CAC078F00C1EA1B /* Main.storyboard */,
 				0FBC1CAF1CAC078F00C1EA1B /* Assets.xcassets */,
 				0FBC1CB11CAC078F00C1EA1B /* LaunchScreen.storyboard */,
+				0F5A0E171CD10F450064B4DD /* C06.wav */,
+				0F5A0E191CD10F610064B4DD /* C18.wav */,
+				0F5A0E1A1CD10F610064B4DD /* D08.wav */,
+				0F5A0E1B1CD10F610064B4DD /* D20.wav */,
+				0F5A0E1C1CD10F610064B4DD /* G01.wav */,
+				0F5A0E1D1CD10F610064B4DD /* G13.wav */,
+				0F5CC28A1CD7D92D0059ADB7 /* winning.mp3 */,
+				0F5CC2881CD69F230059ADB7 /* mistake.wav */,
 				0FBC1CB41CAC078F00C1EA1B /* Info.plist */,
+				0F616CA11CD93584002F5EFD /* MySimonInstructions.html */,
 				0FBC1CD61CAC198300C1EA1B /* SwitchingViewController.swift */,
 				0FBC1CD81CAC1A2600C1EA1B /* GamePlayViewController.swift */,
 				0FBC1CDA1CAC1A4300C1EA1B /* InstructionsViewController.swift */,
@@ -244,7 +274,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F5A0E181CD10F450064B4DD /* C06.wav in Resources */,
+				0F5CC28B1CD7D92D0059ADB7 /* winning.mp3 in Resources */,
 				0FBC1CB31CAC078F00C1EA1B /* LaunchScreen.storyboard in Resources */,
+				0F5A0E201CD10F610064B4DD /* D20.wav in Resources */,
+				0F616CA21CD93584002F5EFD /* MySimonInstructions.html in Resources */,
+				0F5CC2891CD69F230059ADB7 /* mistake.wav in Resources */,
+				0FF4CFA01CDA7C4E003CF1C9 /* iOSProj.pdf in Resources */,
+				0F5A0E211CD10F610064B4DD /* G01.wav in Resources */,
+				0F5A0E1E1CD10F610064B4DD /* C18.wav in Resources */,
+				0F5A0E1F1CD10F610064B4DD /* D08.wav in Resources */,
+				0F5A0E221CD10F610064B4DD /* G13.wav in Resources */,
 				0FBC1CB01CAC078F00C1EA1B /* Assets.xcassets in Resources */,
 				0FBC1CAE1CAC078F00C1EA1B /* Main.storyboard in Resources */,
 			);
@@ -418,10 +458,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MySimon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WeberSolutions.MySimon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -429,10 +472,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MySimon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WeberSolutions.MySimon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -503,6 +549,7 @@
 				0FBC1CCF1CAC079000C1EA1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FBC1CD01CAC079000C1EA1B /* Build configuration list for PBXNativeTarget "MySimonTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +558,7 @@
 				0FBC1CD21CAC079000C1EA1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FBC1CD31CAC079000C1EA1B /* Build configuration list for PBXNativeTarget "MySimonUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +567,7 @@
 				0FBC1CD51CAC079000C1EA1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
